@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMIGOS F.C</title>
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .player-photo {
+            width: 60px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app = "myApp">
+
+
+<div class="container mt-5" ng-controller="FirstController">
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="artilheiro2.jpg"  class="d-block w-25" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Idiotas</h5>
+        <p>Somos todos idiotas da rodada.</p>
+      </div>
+    </div>
+    <!--<div class="carousel-item" data-bs-interval="2000">
+      <img src="artilheiro2.jpg" class="d-block w-25" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="artilheiro2.jpg" class="d-block w-25" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>-->
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    <br><br>
+    <h2 class="text-center">Ranking de Jogadores - 2025</h2>
+<br><br>
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Foto</th>
+                    <th>Nome</th>
+                    <th>Gols</th>
+                    <th>Canetas</th>
+                    <th>Chapéus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="jogador in jogadores | orderBy:'-gols'" >
+                    <td>{{$index+1}}</td>
+                    <td><img src="foto.jpg" alt="Jogador 1" class="player-photo"></td>
+                    <td>{{jogador.nome}}</td>
+                    <td>{{jogador.gols}}</td>
+                    <td>{{jogador.gols}}</td>
+                    <td>{{jogador.gols}}</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Scripts do Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+
+    var app = angular.module('myApp', []);
+
+    app.controller('FirstController', function($scope) {
+       $scope.jogadores = [
+{nome:'Beto',gols:0},
+{nome:'Gordo',gols:0},
+{nome:'Vitao',gols:0},
+{nome:'Junior',gols:0},
+{nome:'Everton',gols:0},
+{nome:'Gugu',gols:0},
+{nome:'Portuga',gols:0},
+{nome:'Rafael',gols:0},
+{nome:'Guinho',gols:0},
+{nome:'Dadinga',gols:0},
+{nome:'Leo 21',gols:0},
+{nome:'Fabiano',gols:0},
+{nome:'Fabinho',gols:0},
+{nome:'Fernando',gols:0},
+{nome:'Guigo',gols:0},
+{nome:'Hailton',gols:0},
+{nome:'Luizinho',gols:0},
+{nome:'Nasa',gols:0},
+{nome:'Marcio',gols:0},
+{nome:'Mateus',gols:0},
+{nome:'Nathan',gols:0},
+{nome:'Nilson',gols:0},
+{nome:'Paulo',gols:0},
+{nome:'Ricardo',gols:0},
+{nome:'Ryan',gols:0},
+{nome:'Van',gols:0},
+{nome:'Vini',gols:0},
+{nome:'Wender',gols:0},
+{nome:'Leo',gols:0}
+
+
+
+];
+    });
+</script>
+
+</body>
+</html>
